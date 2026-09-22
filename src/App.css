@@ -25,6 +25,11 @@
   
   /* OUTSIDE BACKGROUND */
   --page-bg: #F8F0E6;
+
+  /* SIDEBAR */
+  --sidebar-bg: #2B111A;      
+  --sidebar-active: #6D3043;    
+  --text-light: #FFFFFF;      
 }
 
 body {
@@ -52,4 +57,18 @@ body {
   display: flex;
   flex-direction: column;
   overflow: hidden;
+}
+
+.window-body {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+  gap: 0;
+}
+
+.content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 40px;
+  background-color: var(--window-bg);
 }
