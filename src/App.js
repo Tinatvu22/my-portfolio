@@ -3,8 +3,8 @@ import './App.css';
 
 function App() {
   return (
-    <div className="app">
-      <h1>Starting Fresh</h1>
+    <div className="window-container">
+      {/* Empty for now - we'll add content later */}
     </div>
   );
 }
