@@ -1,0 +1,29 @@
+.window-header {
+  background-color: var(--header-bg);
+  color: var(--header-text-color);
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.header-logo {
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  object-fit: contain;
+}
+
+.header-title {
+  font-size: var(--header-text-size);
+  font-weight: 600;
+  letter-spacing: 1px;
+}

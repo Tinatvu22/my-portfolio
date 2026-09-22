@@ -1,0 +1,49 @@
+.window-controls {
+  display: flex;
+  gap: 8px;
+  position: absolute;
+  right: 10px;
+  top: 8px;
+}
+
+.control-btn {
+  background-color: #6D3043;
+  border: none;
+  color: var(--header-text-color);
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  transition: all 0.2s;
+  padding: 0;
+}
+
+.control-btn img {
+  width: 18px;
+  height: 18px;
+  filter: brightness(1.2);
+}
+
+.control-btn.minimize {
+  align-items: flex-end;  
+  padding-bottom: 4px;  
+}
+
+.control-btn.minimize img {
+  width: 18px;
+  height: 5px;  
+  object-fit: contain;
+}
+
+.control-btn:hover {
+  background-color: rgba(255, 255, 255, 0.381);
+  opacity: 0.9;
+}
+
+.control-btn.close:hover {
+  background-color: #d63031;
+  color: white;
+}

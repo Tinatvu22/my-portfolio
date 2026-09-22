@@ -9,16 +9,22 @@
   --window-bg: #F8F0E6;
   
   /* WINDOW SIZE */
-  --window-width: 1200px; 
-  --window-height: 700px; 
+  --window-width: 1259px;
+  --window-height: 700px;
   --window-radius: 16px;
 
   /* WINDOW BORDER/OUTLINE */
-  --border-color: #633344; 
-  --border-width: 3px; 
+  --border-color: #633344;
+  --border-width: 3px;
+  
+  /* HEADER */
+  --header-bg: #3d2b2b;
+  --header-height: 110px;
+  --header-text-color: #f5f1ed;
+  --header-text-size: 24px;
   
   /* OUTSIDE BACKGROUND */
-  --page-bg: #F8F0E6; 
+  --page-bg: #F8F0E6;
 }
 
 body {
@@ -34,7 +40,7 @@ body {
   padding: 20px;
 }
 
-/* THE WINDOW */
+/* MAIN WINDOW */
 .window-container {
   width: 100%;
   max-width: var(--window-width);
@@ -42,6 +48,8 @@ body {
   background-color: var(--window-bg);
   border-radius: var(--window-radius);
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
-  
   border: var(--border-width) solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
