@@ -6,6 +6,11 @@ import Footer from './components/Footer/Footer';
 
 function App() {
   const [selected, setSelected] = useState('home');
+  const [darkMode, setDarkMode] = useState(true); // true = dark mode, false = light mode
+
+  const toggleDarkMode = () => {
+    setDarkMode(!darkMode);
+  };
 
   return (
     <div className="window-container">
@@ -17,7 +22,7 @@ function App() {
           <p>Content for {selected} will go here</p>
         </main>
       </div>
-      <Footer />
+      <Footer darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
     </div>
   );
 }

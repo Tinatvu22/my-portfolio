@@ -1,3 +1,73 @@
 .window-footer {
-  /* ... */
+  background-color: var(--header-bg);
+  color: var(--header-text-color);
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  border-radius: 8px;
+  flex-shrink: 0;
+  
+  /* POSITION AT BOTTOM */
+  position: absolute;
+  bottom: 12px;
+  left: 140px;   
+  right: 20px;  
+  width: auto;
+  z-index: 10;
+}
+
+.footer-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-text {
+  font-size: 13px;
+  font-family: 'Courier New', monospace;
+  letter-spacing: 0.5px;
+}
+
+.footer-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer-icon-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  transition: all 0.2s;
+}
+
+.footer-icon-btn img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+
+.footer-icon-btn:hover img {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.footer-divider {
+  font-size: 14px;
+  opacity: 0.6;
+}
+
+.footer-time {
+  font-size: 13px;
+  font-family: 'Courier New', monospace;
+  min-width: 60px;
+  text-align: right;
 }
