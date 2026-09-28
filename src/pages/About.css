@@ -1,0 +1,170 @@
+.about-container {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding-bottom: 60px;
+}
+
+.about-header {
+  display: grid;
+  grid-template-columns: 1fr 200px;  
+  gap: 60px;
+  align-items: start;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #e8d7c3;
+}
+
+.about-left {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.about-title {
+  font-size: 48px;
+  font-weight: bold;
+  color: var(--sidebar-bg);
+  line-height: 1.2;
+  margin-bottom: 0; 
+}
+
+.about-tagline {
+  font-size: 16px;
+  color: #666;
+  font-style: italic;
+  margin-bottom: 0; 
+}
+
+.about-section h2 {
+  font-size: 20px;
+  color: var(--sidebar-bg);
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.about-section p {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.8;
+}
+
+.about-photo {
+  width: 220px;
+  height: 220px;
+  background-color: #e8d7c3;
+  border: 2px dashed #b8a090;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  color: #999;
+}
+
+/* CARDS SECTION */
+.about-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 40px;
+  padding-bottom: 60px;
+}
+
+.card {
+  background: white;
+  border: 1px solid #e0d5ca;
+  border-radius: 12px;
+  padding: 35px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  min-height: 400px;
+}
+
+.card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--sidebar-bg);
+  margin-bottom: 30px;
+}
+
+/* SKILLS CARD */
+.skills-category {
+  margin-bottom: 30px;
+}
+
+.skills-category:last-child {
+  margin-bottom: 0;
+}
+
+.category-label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #999;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skill-tag {
+  display: inline-block;
+  background-color: #f0e5d8;
+  color: var(--sidebar-bg);
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 10px;
+  font-weight: 500;
+  border: 1px solid #e8d7c3;
+}
+
+/* CURRENTLY CARD */
+.currently-item {
+  display: flex;
+  margin-bottom: 25px;
+  font-size: 14px;
+}
+
+.currently-item:last-child {
+  margin-bottom: 0;
+}
+
+.currently-label {
+  font-weight: 600;
+  color: var(--sidebar-active);
+  min-width: 90px;
+}
+
+.currently-value {
+  color: #666;
+  margin-left: 15px;
+}
+
+/* FUN FACTS CARD */
+.fun-fact {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+  font-size: 14px;
+}
+
+.fun-fact:last-child {
+  margin-bottom: 0;
+}
+
+.fun-fact-number {
+  font-weight: 700;
+  color: var(--sidebar-bg);
+  min-width: 30px;
+  font-size: 16px;
+}
+
+.fun-fact-text {
+  color: #666;
+  line-height: 1.6;
+}

@@ -4,6 +4,15 @@ import { useState, useEffect } from 'react';
 function Footer({ darkMode, toggleDarkMode, selected }) {
   const [time, setTime] = useState('0:00 PM');
 
+  const footerMessages = {
+    home: '➤_ Thanks for visiting!',
+    about: '➤_ Here is a bit about me...',
+    projects: '➤_ Check out my work!',
+    links: '➤_ Connect with me!',
+    faq: '➤_ Got questions?',
+    contact: '➤_ Let\'s get in touch!'
+  };
+
   useEffect(() => {
     const updateTime = () => {
       const now = new Date();
@@ -20,7 +29,7 @@ function Footer({ darkMode, toggleDarkMode, selected }) {
   return (
     <footer className={`window-footer ${selected !== 'home' ? 'expanded' : ''}`}>
       <div className="footer-left">
-        <span className="footer-text">➤ Thanks for visiting!</span>
+        <span className="footer-text">{footerMessages[selected] || footerMessages.home}</span>
       </div>
       <div className="footer-right">
         <button className="footer-icon-btn" title="Trash">

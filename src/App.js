@@ -5,6 +5,10 @@ import Sidebar from './components/Sidebar/Sidebar';
 import Footer from './components/Footer/Footer';
 import Home from './pages/Home';
 import About from './pages/About';
+import Projects from './pages/Projects';
+import Links from './pages/Links';
+import FAQ from './pages/FAQ';
+import Contact from './pages/Contact';
 
 function App() {
   const [selected, setSelected] = useState('home');
@@ -20,6 +24,14 @@ function App() {
         return <Home />;
       case 'about':
         return <About />;
+      case 'projects':
+        return <Projects />;
+      case 'links':
+        return <Links />;
+      case 'faq':
+        return <FAQ />;
+      case 'contact':
+        return <Contact />;
       default:
         return <Home />;
     }
