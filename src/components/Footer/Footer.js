@@ -7,7 +7,7 @@ function Footer({ darkMode, toggleDarkMode, selected }) {
   const footerMessages = {
     home: '➤_ Thanks for visiting!',
     about: '➤_ Here is a bit about me...',
-    projects: '➤_ Check out my work!',
+    projects: '➤_ Loading projects...',
     links: '➤_ Connect with me!',
     faq: '➤_ Got questions?',
     contact: '➤_ Let\'s get in touch!'
