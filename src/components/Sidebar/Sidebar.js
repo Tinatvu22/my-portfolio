@@ -2,12 +2,12 @@ import './Sidebar.css';
 
 function Sidebar({ selected, setSelected }) {
   const navItems = [
-    { id: 'home', icon: '/home.png', label: 'Home' },
-    { id: 'about', icon: '/about.png', label: 'About Me' },
-    { id: 'projects', icon: '/projects.png', label: 'Projects' },
-    { id: 'links', icon: '/links.png', label: 'Links' },
-    { id: 'faq', icon: '/faq.png', label: 'FAQ' },
-    { id: 'contact', icon: '/contact.png', label: 'Contact' }
+    { id: 'home', icon: '/sidebar/home.png', label: 'Home' },
+    { id: 'about', icon: '/sidebar/about.png', label: 'About Me' },
+    { id: 'projects', icon: '/sidebar/projects.png', label: 'Projects' },
+    { id: 'links', icon: '/sidebar/links.png', label: 'Links' },
+    { id: 'faq', icon: '/sidebar/faq.png', label: 'FAQ' },
+    { id: 'contact', icon: '/sidebar/contact.png', label: 'Contact' }
   ];
 
   return (
@@ -26,7 +26,7 @@ function Sidebar({ selected, setSelected }) {
       </div>
 
       <div className="sidebar-character">
-        <img src="/character.png" alt="Character" />
+        <img src="/sidebar/character.png" alt="Character" />
       </div>
     </aside>
   );

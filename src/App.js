@@ -13,54 +13,33 @@ import Contact from './pages/Contact';
 function App() {
   const [selected, setSelected] = useState('home');
   const [darkMode, setDarkMode] = useState(true);
-
-  const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
-  };
+  const toggleDarkMode = () => setDarkMode(!darkMode);
 
   const renderPage = () => {
     switch (selected) {
-      case 'home':
-        return <Home />;
-      case 'about':
-        return <About />;
-      case 'projects':
-        return <Projects />;
-      case 'links':
-        return <Links />;
-      case 'faq':
-        return <FAQ />;
-      case 'contact':
-        return <Contact />;
-      default:
-        return <Home />;
+      case 'home': return <Home />;
+      case 'about': return <About />;
+      case 'projects': return <Projects />;
+      case 'links': return <Links setSelected={setSelected} />;
+      case 'faq': return <FAQ />;
+      case 'contact': return <Contact />;
+      default: return <Home />;
     }
   };
 
   return (
     <div className="app-wrapper">
       <div className={`window-frame ${selected !== 'home' ? 'sidebar-out' : ''}`}>
-        {/* Sidebar sits outside the window so it can slide past its left edge */}
         <Sidebar selected={selected} setSelected={setSelected} />
-
         <div className="window-container">
           <Header />
-
           <div className="main-body">
-            <main className="content">
-              {renderPage()}
-            </main>
+            <main className="content">{renderPage()}</main>
           </div>
-
-          <Footer
-            darkMode={darkMode}
-            toggleDarkMode={toggleDarkMode}
-            selected={selected}
-          />
+          <Footer darkMode={darkMode} toggleDarkMode={toggleDarkMode} selected={selected} />
         </div>
       </div>
     </div>
   );
 }
-
 export default App;

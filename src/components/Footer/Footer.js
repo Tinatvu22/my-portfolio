@@ -33,17 +33,17 @@ function Footer({ darkMode, toggleDarkMode, selected }) {
       </div>
       <div className="footer-right">
         <button className="footer-icon-btn" title="Trash">
-          <img src="/trash.png" alt="Trash" />
+          <img src="/footer/trash.png" alt="Trash" />
         </button>
         <button className="footer-icon-btn" title="Settings">
-          <img src="/settings.png" alt="Settings" />
+          <img src="/footer/settings.png" alt="Settings" />
         </button>
         <button
           className="footer-icon-btn"
           title={darkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
           onClick={toggleDarkMode}
         >
-          <img src={darkMode ? '/moon.png' : '/sun.png'} alt="Theme Toggle" />
+          <img src={darkMode ? '/footer/moon.png' : '/footer/sun.png'} alt="Theme Toggle" />
         </button>
         <span className="footer-divider">|</span>
         <span className="footer-time">{time}</span>
