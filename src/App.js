@@ -22,10 +22,10 @@ function App() {
       case 'projects': return <Projects />;
       case 'links': return <Links setSelected={setSelected} />;
       case 'faq': return <FAQ />;
-      case 'contact': return <Contact />;
+      case 'contact': return <Contact setSelected={setSelected} />; 
       default: return <Home />;
-    }
-  };
+  }
+};
 
   return (
     <div className="app-wrapper">
