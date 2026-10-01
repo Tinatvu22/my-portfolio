@@ -1,5 +1,8 @@
 import './Contact.css';
 import { useState } from 'react';
+import emailjs from '@emailjs/browser';
+
+emailjs.init('4gOZACo7iPDL41zRY');
 
 function Contact({ setSelected }) {
   const [formData, setFormData] = useState({
@@ -9,6 +12,8 @@ function Contact({ setSelected }) {
     message: ''
   });
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState('');
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -18,16 +23,48 @@ function Contact({ setSelected }) {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // For now, just show success message
-    // You can integrate EmailJS or Formspree later
-    console.log('Form submitted:', formData);
-    setSubmitted(true);
-    setTimeout(() => {
+    setLoading(true);
+    setError('');
+
+    try {
+      // Send email to you
+      await emailjs.send(
+        'service_rz77w48',      
+        'template_hj1khon',   
+        {
+          to_email: 'Tinatvu04@gmail.com',
+          from_name: formData.name,
+          from_email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+          reply_to: formData.email
+        }
+      );
+
+      await emailjs.send(
+        'service_rz77w48',
+        'template_18kakt8', 
+        {
+          to_email: formData.email,
+          user_name: formData.name
+        }
+      );
+
+      // Show success
+      setSubmitted(true);
       setFormData({ name: '', email: '', subject: 'Job opportunity', message: '' });
-      setSubmitted(false);
-    }, 3000);
+      
+      setTimeout(() => {
+        setSubmitted(false);
+      }, 4000);
+    } catch (err) {
+      console.error('Error sending email:', err);
+      setError('Failed to send message. Please try again.');
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -95,6 +132,7 @@ function Contact({ setSelected }) {
                   value={formData.name}
                   onChange={handleChange}
                   required
+                  disabled={loading}
                 />
               </div>
               <div className="form-group">
@@ -106,6 +144,7 @@ function Contact({ setSelected }) {
                   value={formData.email}
                   onChange={handleChange}
                   required
+                  disabled={loading}
                 />
               </div>
             </div>
@@ -116,6 +155,7 @@ function Contact({ setSelected }) {
                 name="subject"
                 value={formData.subject}
                 onChange={handleChange}
+                disabled={loading}
               >
                 <option>Job opportunity</option>
                 <option>Freelance project</option>
@@ -134,14 +174,18 @@ function Contact({ setSelected }) {
                 onChange={handleChange}
                 rows="6"
                 required
+                disabled={loading}
               ></textarea>
             </div>
+
+            {error && <p style={{ color: '#d32f2f', fontSize: '13px' }}>{error}</p>}
 
             <button 
               type="submit" 
               className={`submit-btn ${submitted ? 'submitted' : ''}`}
+              disabled={loading}
             >
-              {submitted ? '✓ Message sent!' : 'Send Message →'}
+              {loading ? 'Sending...' : submitted ? '✓ Message sent!' : 'Send Message →'}
             </button>
           </form>
         </div>
