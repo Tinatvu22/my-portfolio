@@ -109,7 +109,8 @@
   background: white;
   border: 1px solid #e0d5ca;
   border-radius: 12px;
-  padding: 24px;
+  padding: 35px;
+  min-height: 400px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   transition: all 0.3s ease;
 }

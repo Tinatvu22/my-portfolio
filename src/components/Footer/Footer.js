@@ -26,8 +26,19 @@ function Footer({ darkMode, toggleDarkMode, selected }) {
     return () => clearInterval(interval);
   }, []);
 
+  // Start in the home position, then expand on the next frame so the
+  // left transition plays alongside the sidebar sliding out
+  const [expanded, setExpanded] = useState(false);
+
+  useEffect(() => {
+    let frame = requestAnimationFrame(() => {
+      frame = requestAnimationFrame(() => setExpanded(selected !== 'home'));
+    });
+    return () => cancelAnimationFrame(frame);
+  }, [selected]);
+
   return (
-    <footer className={`window-footer ${selected !== 'home' ? 'expanded' : ''}`}>
+    <footer className={`window-footer ${expanded ? 'expanded' : ''}`}>
       <div className="footer-left">
         <span className="footer-text">{footerMessages[selected] || footerMessages.home}</span>
       </div>

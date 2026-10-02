@@ -1,4 +1,4 @@
-import '../Footer/Footer.css';
+import '../Footer.css';
 import './HomeFooter.css';
 import { useState, useEffect, useRef, useCallback } from 'react';
 

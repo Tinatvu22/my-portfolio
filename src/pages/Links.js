@@ -23,7 +23,7 @@ function Links({ setSelected }) {
   // Download function
   const handleDownloadResume = () => {
     const link = document.createElement('a');
-    link.href = '/resume.pdf';
+    link.href = '/Tina_s_Resume.pdf';
     link.download = 'Tina_Vu_Resume.pdf';
     document.body.appendChild(link);
     link.click();
@@ -32,7 +32,7 @@ function Links({ setSelected }) {
 
   // View function
   const handleViewResume = () => {
-    window.open('/resume.pdf', '_blank');
+    window.open('/Tina_s_Resume.pdf', '_blank');
   };
 
   return (
