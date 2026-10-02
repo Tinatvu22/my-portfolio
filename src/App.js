@@ -3,6 +3,7 @@ import './App.css';
 import Header from './components/Header/Header';
 import Sidebar from './components/Sidebar/Sidebar';
 import Footer from './components/Footer/Footer';
+import HomeFooter from './components/HomeFooter/HomeFooter';
 import Home from './pages/Home';
 import About from './pages/About';
 import Projects from './pages/Projects';
@@ -17,13 +18,13 @@ function App() {
 
   const renderPage = () => {
     switch (selected) {
-      case 'home': return <Home />;
+      case 'home': return <Home setSelected={setSelected} />;
       case 'about': return <About />;
       case 'projects': return <Projects />;
       case 'links': return <Links setSelected={setSelected} />;
       case 'faq': return <FAQ />;
       case 'contact': return <Contact setSelected={setSelected} />; 
-      default: return <Home />;
+      default: return <Home setSelected={setSelected} />;
   }
 };
 
@@ -36,7 +37,11 @@ function App() {
           <div className="main-body">
             <main className="content">{renderPage()}</main>
           </div>
-          <Footer darkMode={darkMode} toggleDarkMode={toggleDarkMode} selected={selected} />
+          {selected === 'home' ? (
+            <HomeFooter darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+          ) : (
+            <Footer darkMode={darkMode} toggleDarkMode={toggleDarkMode} selected={selected} />
+          )}
         </div>
       </div>
     </div>

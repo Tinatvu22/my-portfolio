@@ -61,7 +61,7 @@ function Projects() {
         <div className="projects-header">
           <div>
             <h1 className="projects-title">Projects</h1>
-            <p className="projects-intro">[A short intro to the kind of work shown here]</p>
+            <p className="projects-intro">Click any project to open it up and take a look.</p>
           </div>
 
           {/* Filter Buttons */}
