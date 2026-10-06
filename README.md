@@ -2,7 +2,7 @@
 
 A personal portfolio website built with React, showcasing my projects, skills, and experience as a full-stack developer.
 
-![Portfolio Preview](image) ![License](image)
+<!-- ![Portfolio Preview](image) ![License](image) -->
 
 ## ✨ Features
 
@@ -35,10 +35,10 @@ src/
 │   │   └── Sidebar.css
 │   ├── Footer/
 │   │   ├── Footer.js
-│   │   └── Footer.css
-│   ├── HomeFooter/
-│   │   ├── HomeFooter.js
-│   │   └── HomeFooter.css
+│   │   ├── Footer.css
+│   │   └── HomeFooter/
+│   │       ├── HomeFooter.js
+│   │       └── HomeFooter.css
 │   └── WindowControls/
 │       ├── WindowControls.js
 │       └── WindowControls.css
@@ -61,18 +61,11 @@ src/
 └── index.css
 
 public/
-├── icons/
-│   ├── sidebar/ (navigation icons)
-│   ├── header/ (logo)
-│   ├── window/ (minimize, maximize, close)
-│   ├── footer/ (trash, settings, theme)
-│   ├── character/ (avatar)
-│   ├── professional/ (LinkedIn, GitHub, email)
-│   ├── creative/ (Figma, Dribbble, art)
-│   └── social/ (Instagram, Discord, etc)
+├── sidebar/ (navigation icons & avatar)
+├── header-window/ (logo, minimize, maximize, close)
+├── footer/ (trash, settings, theme)
 ├── links/ (social media icons)
-├── resume.pdf
-└── resume.png
+└── Tina_s_Resume.pdf
 ```
 
 ## 🚀 Getting Started
@@ -137,7 +130,7 @@ Built from Figma design with attention to detail:
 - **Color Palette:** Cream (#F8F0E6) & Burgundy (#633344)
 - **Typography:** System fonts for performance
 - **Layout:** Grid-based responsive design
-- **Icons:** Custom SVG and PNG assets
+- **Icons:** PNG assets
 
 ## 🔄 Git Workflow
 
@@ -160,11 +153,11 @@ npm run build
 # Follow GitHub Pages setup in repository settings
 ```
 
-### Netlify
+<!-- ### Netlify
 ```bash
 # Connect repository to Netlify
 # Auto-deploys on push to main
-```
+``` -->
 
 ## 📋 To-Do
 
