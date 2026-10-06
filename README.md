@@ -1,17 +1,17 @@
 # Tina's Portfolio
 
-A personal portfolio website built with React, showcasing my projects, skills, and experience as a full-stack developer.
+A personal portfolio website built with React, showcasing my projects, and skills.
 
 <!-- ![Portfolio Preview](image) ![License](image) -->
 
 ## ✨ Features
 
-- **Desktop App Aesthetic** - Browser-based window UI with sidebar navigation and title bar
+- **Desktop App Aesthetic** - Browser based window UI with sidebar navigation and title bar
 - **Responsive Design** - Seamlessly adapts to desktop and mobile devices
 - **Contact Form** - EmailJS integration for direct messaging with auto-reply
-- **Project Showcase** - Display of featured work with category filters (Design, Development, Art)
+- **Project Showcase** - Display of featured work with category filters
 - **FAQ Section** - Accordion-style answers to common questions
-- **Links Page** - Resume download, GitHub, LinkedIn, and social media links
+- **Links Page** - Resume download, GitHub, and LinkedIn links
 - **Smooth Animations** - Typing animation on home page with replay button
 - **Status Badge** - Current availability and location info
 
@@ -71,7 +71,7 @@ public/
 ## 🚀 Getting Started
 
 ### Prerequisites
-- Node.js (v14+)
+- Node.js 
 - npm
 
 ### Installation
@@ -95,7 +95,7 @@ The application will open at `http://localhost:3000`
 ### Build for Production
 
 ```bash
-npm run build
+npm start run
 ```
 
 ## 📧 Email Setup (Contact Form)
@@ -105,7 +105,7 @@ To enable the contact form with auto-reply:
 1. Create account at [EmailJS](https://www.emailjs.com/)
 2. Set up Email Service
 3. Create two email templates:
-   - **Template 1:** Contact notification (to your inbox)
+   - **Template 1:** Contact us (to your inbox)
    - **Template 2:** Auto-reply (to sender)
 4. Update credentials in `src/pages/Contact.js`:
    ```javascript
@@ -119,8 +119,8 @@ To enable the contact form with auto-reply:
 |------|---------|
 | **Home** | Introduction, featured project, status, and current learning |
 | **About** | Background, skills & tools, fun facts |
-| **Projects** | Filterable project gallery (Design, Development, Art) |
-| **Links** | Resume download, GitHub, LinkedIn, and social links |
+| **Projects** | Filterable project gallery |
+| **Links** | Resume download, GitHub, and LinkedIn links |
 | **FAQ** | Common questions about me and my work |
 | **Contact** | Direct contact form with auto-reply |
 
@@ -149,7 +149,7 @@ git push origin main
 
 ### GitHub Pages
 ```bash
-npm run build
+npm start run
 # Follow GitHub Pages setup in repository settings
 ```
 
@@ -164,13 +164,8 @@ npm run build
 - [ ] Deploy to production
 - [ ] Implement dark/light mode full functionality
 - [ ] Add more projects
-- [ ] Blog section
-- [ ] Analytics tracking
-- [ ] SEO optimization
-
-## 📝 License
-
-This project is open source and available under the MIT License - see the LICENSE file for details.
+- [ ] Implement smaller functionality
+- [ ] Fill in more info to profile
 
 ## 👋 Connect With Me
 
@@ -181,4 +176,4 @@ This project is open source and available under the MIT License - see the LICENS
 
 ---
 
-Made with 💖 by Tina Vu | Currently open to opportunities
+Made by Tina Vu | Currently open to opportunities

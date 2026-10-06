@@ -26,8 +26,6 @@ function Footer({ darkMode, toggleDarkMode, selected }) {
     return () => clearInterval(interval);
   }, []);
 
-  // Start in the home position, then expand on the next frame so the
-  // left transition plays alongside the sidebar sliding out
   const [expanded, setExpanded] = useState(false);
 
   useEffect(() => {

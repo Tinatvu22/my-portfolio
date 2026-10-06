@@ -17,7 +17,6 @@
   border-radius: 0 0 0 calc(var(--window-radius) - var(--border-width));
 }
 
-/* SHIFT LEFT - slide out past the window edge, leaving a thin strip inside */
 .sidebar.slide-out {
   transform: translateX(calc(-100% + var(--sidebar-peek)));
   border-radius: 12px 0 0 12px;
