@@ -1,70 +1,191 @@
-# Getting Started with Create React App
+# Tina's Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A personal portfolio website built with React, showcasing my projects, skills, and experience as a full-stack developer.
 
-## Available Scripts
+![Portfolio Preview](image) ![License](image)
 
-In the project directory, you can run:
+## ✨ Features
 
-### `npm start`
+- **Desktop App Aesthetic** - Browser-based window UI with sidebar navigation and title bar
+- **Responsive Design** - Seamlessly adapts to desktop and mobile devices
+- **Contact Form** - EmailJS integration for direct messaging with auto-reply
+- **Project Showcase** - Display of featured work with category filters (Design, Development, Art)
+- **FAQ Section** - Accordion-style answers to common questions
+- **Links Page** - Resume download, GitHub, LinkedIn, and social media links
+- **Smooth Animations** - Typing animation on home page with replay button
+- **Status Badge** - Current availability and location info
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🛠️ Tech Stack
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Frontend:** React, JavaScript, CSS3
+- **Email Service:** EmailJS
+- **Design Tool:** Figma
+- **Hosting:** [Add when deployed]
 
-### `npm test`
+## 📂 Project Structure
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+src/
+├── components/
+│   ├── Header/
+│   │   ├── Header.js
+│   │   └── Header.css
+│   ├── Sidebar/
+│   │   ├── Sidebar.js
+│   │   └── Sidebar.css
+│   ├── Footer/
+│   │   ├── Footer.js
+│   │   └── Footer.css
+│   ├── HomeFooter/
+│   │   ├── HomeFooter.js
+│   │   └── HomeFooter.css
+│   └── WindowControls/
+│       ├── WindowControls.js
+│       └── WindowControls.css
+├── pages/
+│   ├── Home.js
+│   ├── Home.css
+│   ├── About.js
+│   ├── About.css
+│   ├── Projects.js
+│   ├── Projects.css
+│   ├── Links.js
+│   ├── Links.css
+│   ├── FAQ.js
+│   ├── FAQ.css
+│   ├── Contact.js
+│   └── Contact.css
+├── App.js
+├── App.css
+├── index.js
+└── index.css
 
-### `npm run build`
+public/
+├── icons/
+│   ├── sidebar/ (navigation icons)
+│   ├── header/ (logo)
+│   ├── window/ (minimize, maximize, close)
+│   ├── footer/ (trash, settings, theme)
+│   ├── character/ (avatar)
+│   ├── professional/ (LinkedIn, GitHub, email)
+│   ├── creative/ (Figma, Dribbble, art)
+│   └── social/ (Instagram, Discord, etc)
+├── links/ (social media icons)
+├── resume.pdf
+└── resume.png
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🚀 Getting Started
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Prerequisites
+- Node.js (v14+)
+- npm
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Installation
 
-### `npm run eject`
+```bash
+# Clone the repository
+git clone https://github.com/Tinatvu22/my-portfolio.git
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+# Navigate to project directory
+cd my-portfolio
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# Install dependencies
+npm install
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+# Start development server
+npm start
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+The application will open at `http://localhost:3000`
 
-## Learn More
+### Build for Production
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+npm run build
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 📧 Email Setup (Contact Form)
 
-### Code Splitting
+To enable the contact form with auto-reply:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+1. Create account at [EmailJS](https://www.emailjs.com/)
+2. Set up Email Service
+3. Create two email templates:
+   - **Template 1:** Contact notification (to your inbox)
+   - **Template 2:** Auto-reply (to sender)
+4. Update credentials in `src/pages/Contact.js`:
+   ```javascript
+   emailjs.init('YOUR_PUBLIC_KEY');
+   ```
+5. Update template IDs in the `handleSubmit` function
 
-### Analyzing the Bundle Size
+## 📄 Pages Overview
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+| Page | Purpose |
+|------|---------|
+| **Home** | Introduction, featured project, status, and current learning |
+| **About** | Background, skills & tools, fun facts |
+| **Projects** | Filterable project gallery (Design, Development, Art) |
+| **Links** | Resume download, GitHub, LinkedIn, and social links |
+| **FAQ** | Common questions about me and my work |
+| **Contact** | Direct contact form with auto-reply |
 
-### Making a Progressive Web App
+## 🎨 Design
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Built from Figma design with attention to detail:
+- **Color Palette:** Cream (#F8F0E6) & Burgundy (#633344)
+- **Typography:** System fonts for performance
+- **Layout:** Grid-based responsive design
+- **Icons:** Custom SVG and PNG assets
 
-### Advanced Configuration
+## 🔄 Git Workflow
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```bash
+# Stage changes
+git add .
 
-### Deployment
+# Commit with descriptive message
+git commit -m "Feature: add contact form functionality"
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+# Push to GitHub
+git push origin main
+```
 
-### `npm run build` fails to minify
+## 🚀 Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### GitHub Pages
+```bash
+npm run build
+# Follow GitHub Pages setup in repository settings
+```
+
+### Netlify
+```bash
+# Connect repository to Netlify
+# Auto-deploys on push to main
+```
+
+## 📋 To-Do
+
+- [ ] Deploy to production
+- [ ] Implement dark/light mode full functionality
+- [ ] Add more projects
+- [ ] Blog section
+- [ ] Analytics tracking
+- [ ] SEO optimization
+
+## 📝 License
+
+This project is open source and available under the MIT License - see the LICENSE file for details.
+
+## 👋 Connect With Me
+
+- **Email:** [Tinatvu04@gmail.com](mailto:Tinatvu04@gmail.com)
+- **LinkedIn:** [linkedin.com/in/tina-t-vu](https://linkedin.com/in/tina-t-vu)
+- **GitHub:** [github.com/Tinatvu22](https://github.com/Tinatvu22)
+- **Location:** Houston, TX · Central Time (CST)
+
+---
+
+Made with 💖 by Tina Vu | Currently open to opportunities
